@@ -147,6 +147,9 @@ nav .fa {
   .nav-links ul {
     padding: 20px;
   }
+  input {
+    width: 40%;
+  }
 }
 /* Intro */
 .intro {
