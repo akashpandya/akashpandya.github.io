@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header and Navbar -->
+    <section class="header" id="head">
+      <nav>
+        <a href="index.html"><img src="./images/logo.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="#head">HOME</a></li>
+            <li><a href="#who_iam">INTRODUCTION</a></li>
+            <li><a href="#created_websites">PROJECTS</a></li>
+            <li><a href="">CV</a></li>
+            <li><a href="#hire_me">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h1>
+          Hi, I am Akash Pandya. <br />
+          I <span>Create and Design</span> Websites.
+        </h1>
+        <div class="buttons">
+          <a href="#hire_me" class="hire_me">HIRE ME</a>
+          <a href="" class="Get_CV">GET CV</a>
+        </div>
+      </div>
+    </section>
+    <!-- Intro and Skills -->
+    <section class="intro" id="who_iam">
+      <h1>Related Skills</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, ipsum.</p>
+      <div class="row">
+        <div class="skill-col">
+          <h3>HTML</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+          </p>
+        </div>
+        <div class="skill-col">
+          <h3>CSS</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+          </p>
+        </div>
+        <div class="skill-col">
+          <h3>JAVASCRIPT</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="skill-col">
+          <h3>BOOTSTRAP</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+          </p>
+        </div>
+        <div class="skill-col">
+          <h3>RESPONSIVE DESIGN</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+          </p>
+        </div>
+        <div class="skill-col">
+          <h3>REACT JS</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- pROJECTS -->
+    <section class="projects" id="created_websites">
+      <h1>PROJECTS</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, obcaecati vitae pariatur consequatur officiis expedita?</p>
+      <div class="row">
+        <div class="project-col">
+          <img src="./images/image1.jpg" alt="" />
+          <div class="layer">
+            <h3>Project 1</h3>
+          </div>
+        </div>
+        <div class="project-col">
+          <img src="./images/image2.jpg" alt="" />
+          <div class="layer">
+            <h3>Project 2</h3>
+          </div>
+        </div>
+        <div class="project-col">
+          <img src="./images/image3.jpg" alt="" />
+          <div class="layer">
+            <h3>Project 3</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="hire_me">
+      <h1 class="form_header">Get in Touch</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel suscipit dignissimos velit nisi ipsam debitis.</p>
+      <form>
+        <input type="text" class="grid-item" placeholder="Name:" id="name" />
+        <input type="Email" class="grid-item" placeholder="Email:" id="email" />
+        <input type="number" class="grid-item" placeholder="Phone Number:" id="phone" />
+        <label for="textarea">Your Message Here:</label>
+        <textarea type="text" class="grid-item" id="msg"> </textarea>
+
+        <input type="submit" value="Send" id="btn" />
+      </form>
+    </section>
+    <section class="footer">
+      <p class="copyright">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, assumenda!</p>
+      <div class="icons">
+        <a href="" class="icon"><img src="./images/github.png" alt="" /></a>
+        <a href="" class="icon"><img src="./images/twitter.png" alt="" /></a>
+        <a href="" class="icon"><img src="./images/facebook-app-symbol.png" alt="" /></a>
+        <a href="" class="icon"><img src="./images/linkedin.png" alt="" /></a>
+      </div>
+    </section>
+
+    <!-- Javascript for Toggle Menu -->
+    <script>
+      var navlinks = document.getElementById("navLinks");
+      function showMenu() {
+        navlinks.style.right = "0";
+      }
+      function hideMenu() {
+        navlinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
