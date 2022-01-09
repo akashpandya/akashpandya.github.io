@@ -44,24 +44,28 @@
     <!-- Intro and Skills -->
     <section class="intro" id="who_iam">
       <h1>Related Skills</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, ipsum.</p>
+      <p>Below are a list of my qualifications and skills</p>
       <div class="row">
         <div class="skill-col">
           <h3>HTML</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+            I have over 3 years of experience working with HTML, or hyper-text markup language. This language is used for defining the parts of a webpage, such
+            as headlines and body text. It tells the browser, “Hey, this is a section heading.” The current version is HTML5.
           </p>
         </div>
         <div class="skill-col">
           <h3>CSS</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+            I have over 2 years of experience working with CSS, or Cascading Style Sheets.This langyage is for adding styles, such as colors, font type, and
+            spacing. Combined, they are the building blocks of any website.
           </p>
         </div>
         <div class="skill-col">
           <h3>JAVASCRIPT</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+            I have over a year of experience working with JS or JavaScript. This is a cross-platform, object-oriented scripting language used to make webpages
+            interactive (e.g., having complex animations, clickable buttons, popup menus, etc.). There are also more advanced server side versions of JavaScript
+            such as Node.js, which allow you to add more functionality to a website than downloading files
           </p>
         </div>
       </div>
@@ -69,19 +73,24 @@
         <div class="skill-col">
           <h3>BOOTSTRAP</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+            I have made use of BOOTSTRAP to create several of my front-end based projects. It is a free, open source HTML, CSS, and JavaScript framework for
+            quickly building responsive websites.
           </p>
         </div>
         <div class="skill-col">
           <h3>RESPONSIVE DESIGN</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+            As more diverse screen sizes became available, the concept of responsive web design (RWD) appeared, a set of practices that allows web pages to
+            alter their layout and appearance to suit different screen widths, resolutions, etc. This is a concept that I base all my projects around so that I
+            can maximize user comfort and experience.
           </p>
         </div>
         <div class="skill-col">
           <h3>REACT JS</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non excepturi ea repudiandae ipsa nostrum cupiditate cumque molestiae alias sequi quae.
+            React is a library for building user interfaces. React is not a framework, it's not even exclusive to the web. It's used with other libraries to
+            render to certain environments. For instance, React Native can be used to build mobile applications. I have been learning React for the last 6 or so
+            months and have achieved tremendous results.
           </p>
         </div>
       </div>
@@ -89,7 +98,7 @@
     <!-- pROJECTS -->
     <section class="projects" id="created_websites">
       <h1>PROJECTS</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, obcaecati vitae pariatur consequatur officiis expedita?</p>
+      <p>Check out some of my projects to see what I am capable of!</p>
       <div class="row">
         <div class="project-col">
           <img src="./images/image1.jpg" alt="" />
@@ -113,15 +122,16 @@
     </section>
     <section class="contact" id="hire_me">
       <h1 class="form_header">Get in Touch</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel suscipit dignissimos velit nisi ipsam debitis.</p>
-      <form>
-        <input type="text" class="grid-item" placeholder="Name:" id="name" />
-        <input type="Email" class="grid-item" placeholder="Email:" id="email" />
-        <input type="number" class="grid-item" placeholder="Phone Number:" id="phone" />
-        <label for="textarea">Your Message Here:</label>
-        <textarea type="text" class="grid-item" id="msg"> </textarea>
-
-        <input type="submit" value="Send" id="btn" />
+      <p>Want to hire me? Have a question? Or just want to have a chat?</p>
+      <form id="my-form" action="https://formspree.io/f/xeqnowgw" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" class="grid-item" />
+        <label>Email:</label>
+        <input type="email" name="email" class="grid-item" />
+        <label>Message:</label>
+        <textarea type="text" name="message" class="grid-item"></textarea>
+        <button id="my-form-button" class="btn">Submit</button>
+        <p id="my-form-status"></p>
       </form>
     </section>
     <section class="footer">
@@ -143,6 +153,30 @@
       function hideMenu() {
         navlinks.style.right = "-200px";
       }
+    </script>
+    <script>
+      var form = document.getElementById("my-form");
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset();
+          })
+          .catch((error) => {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          });
+      }
+      form.addEventListener("submit", handleSubmit);
     </script>
   </body>
 </html>

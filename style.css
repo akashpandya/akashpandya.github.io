@@ -159,7 +159,7 @@ nav .fa {
   padding-top: 150px;
 }
 h1 {
-  font-size: 36px;
+  font-size: 50px;
   font-weight: 600;
 }
 p {
@@ -271,7 +271,7 @@ form {
 #btn {
   grid-column: span 2;
 }
-#btn {
+.btn {
   margin: 10px auto;
   padding: 2px 20px;
   border: 1px solid #f44336;
@@ -280,7 +280,7 @@ form {
   transition: 0.5s;
   cursor: pointer;
 }
-#btn:hover {
+.btn:hover {
   background: #f44336;
 }
 label {
